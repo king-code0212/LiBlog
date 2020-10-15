@@ -1,5 +1,5 @@
 /target/
-/ip/
+/temp/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
