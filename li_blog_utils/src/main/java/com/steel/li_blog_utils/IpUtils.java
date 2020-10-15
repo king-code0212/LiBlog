@@ -418,7 +418,7 @@ public class IpUtils {
             String proFilePath = System.getProperty("user.dir");
 
             //获取模板下的路径，然后存放在temp目录下　
-            String newFilePath = proFilePath + File.separator + "temp" + File.separator + ftlPath;
+            String newFilePath = proFilePath + File.separator + "ip" + File.separator + ftlPath;
             newFilePath = newFilePath.replace("/", File.separator);
             //检查项目运行时的src下的对应路径
             File newFile = new File(newFilePath + ftlName);
