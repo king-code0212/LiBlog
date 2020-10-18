@@ -17,10 +17,10 @@ eureka:
     peer-node-read-timeout-ms: 3000
     peer-node-connect-timeout-ms: 3000
   client:
-    # false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º
+    # falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±
     registerWithEureka: false
-    # false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬Ö°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
+    # falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼ŒèŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
     fetchRegistry: false
     serviceUrl:
-      # ÉèÖÃÓëEureka½»»¥µÄµØÖ·²éÑ¯·şÎñºÍ×¢²á·şÎñ¶¼ĞèÒªÒÀÀµÕâ¸öµØÖ·
+      # è®¾ç½®ä¸Eurekaäº¤äº’çš„åœ°å€æŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡éƒ½éœ€è¦ä¾èµ–è¿™ä¸ªåœ°å€
       defaultZone: http://user:password123@localhost:8761/eureka
