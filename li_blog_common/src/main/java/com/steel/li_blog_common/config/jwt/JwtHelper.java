@@ -1,6 +1,6 @@
-package com.steel.li_blog_common.jwt;
+package com.steel.li_blog_common.config.jwt;
 
-import com.steel.li_blog_common.security.SecurityUser;
+import com.steel.li_blog_common.config.security.SecurityUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.mybatis;//package com.moxi.mogublog.config.mybatis;
+package com.steel.li_blog_common.config.mybatis;//package com.moxi.mogublog.config.mybatis;
 //
 //import java.util.ArrayList;
 //import java.util.HashMap;

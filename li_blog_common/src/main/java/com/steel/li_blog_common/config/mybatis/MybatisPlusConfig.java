@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.mybatis;
+package com.steel.li_blog_common.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.incrementer.H2KeyGenerator;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;

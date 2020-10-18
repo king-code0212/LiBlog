@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.security;
+package com.steel.li_blog_common.config.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;

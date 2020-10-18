@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.druid;
+package com.steel.li_blog_common.config.druid;
 
 /**
  * @Auther: steel

@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.jwt;
+package com.steel.li_blog_common.config.jwt;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

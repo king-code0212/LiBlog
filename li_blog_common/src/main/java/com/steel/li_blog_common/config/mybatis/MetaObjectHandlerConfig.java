@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.mybatis;
+package com.steel.li_blog_common.config.mybatis;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;

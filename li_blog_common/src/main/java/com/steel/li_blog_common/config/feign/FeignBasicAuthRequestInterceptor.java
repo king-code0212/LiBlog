@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.feign;
+package com.steel.li_blog_common.config.feign;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

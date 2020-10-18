@@ -1,4 +1,4 @@
-package com.steel.li_blog_common.redis;
+package com.steel.li_blog_common.config.redis;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
