@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="li_blog_common" />
-        <module name="li_blog_base" />
         <module name="li_blog_utils" />
+        <module name="li_blog_eurake" />
+        <module name="li_blog_base" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,6 +19,7 @@
       <module name="LiBlog" options="-parameters" />
       <module name="li_blog_base" options="-parameters" />
       <module name="li_blog_common" options="-parameters" />
+      <module name="li_blog_eurake" options="-parameters" />
       <module name="li_blog_utils" options="-parameters" />
     </option>
   </component>
