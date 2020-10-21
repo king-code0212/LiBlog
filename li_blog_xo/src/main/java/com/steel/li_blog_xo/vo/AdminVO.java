@@ -13,7 +13,7 @@ import java.util.Date;
  * @Description:
  */
 @Data
-public class AdminVo extends BaseVO<AdminVo> {
+public class AdminVO extends BaseVO<AdminVO> {
 
     /**
      * 用户名
