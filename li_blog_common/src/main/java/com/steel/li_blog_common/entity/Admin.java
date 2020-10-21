@@ -3,6 +3,7 @@ package com.steel.li_blog_common.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.steel.li_blog_base.entity.SuperEntity;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,7 +17,7 @@ import java.util.List;
  */
 @Data
 @TableName("t_admin")
-public class Admin {
+public class Admin extends SuperEntity<Admin> {
 
 
     private static final long serialVersionUID = 1L;
