@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="li_blog_admin" />
         <module name="li_blog_common" />
         <module name="li_blog_utils" />
         <module name="li_blog_eurake" />
@@ -18,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="LiBlog" options="-parameters" />
+      <module name="li_blog_admin" options="-parameters" />
       <module name="li_blog_base" options="-parameters" />
       <module name="li_blog_common" options="-parameters" />
       <module name="li_blog_eurake" options="-parameters" />
