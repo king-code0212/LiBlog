@@ -11,14 +11,16 @@
         <module name="li_blog_common" />
         <module name="li_blog_utils" />
         <module name="li_blog_eurake" />
-        <module name="li_blog_base" />
         <module name="li_blog_xo" />
+        <module name="li_blog_base" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="LiBlog" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="li_blog_admin" options="-parameters" />
       <module name="li_blog_base" options="-parameters" />
       <module name="li_blog_common" options="-parameters" />
