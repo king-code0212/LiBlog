@@ -7,15 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="li_blog_admin" />
         <module name="li_blog_common" />
         <module name="li_blog_utils" />
         <module name="li_blog_eurake" />
+        <module name="li_blog_foradmin" />
         <module name="li_blog_xo" />
         <module name="li_blog_base" />
-        <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
+      <module name="li_blog_admin" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,6 +28,7 @@
       <module name="li_blog_base" options="-parameters" />
       <module name="li_blog_common" options="-parameters" />
       <module name="li_blog_eurake" options="-parameters" />
+      <module name="li_blog_foradmin" options="-parameters" />
       <module name="li_blog_utils" options="-parameters" />
       <module name="li_blog_xo" options="-parameters" />
     </option>
