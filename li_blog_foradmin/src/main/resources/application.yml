@@ -14,7 +14,7 @@ file:
 
 # 邮箱验证
 moguBlog:
-  email: mogublog@163.com
+  email: steel_leo@163.com
 
 # 蘑菇博客登录默认密码
 DEFAULE_PWD: mogu2018
@@ -149,7 +149,7 @@ management:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.moxi.mogublog.commons.entity
+  typeAliasesPackage: com.steel.li_blog_common.entity
   global-config:
     # 数据库相关配置
     db-config:

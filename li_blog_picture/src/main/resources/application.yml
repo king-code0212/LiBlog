@@ -1,0 +1,126 @@
+# \u7AEF\u53E3
+server:
+  port: 8602
+
+file:
+  upload:
+    path: D:/li_blog/data/
+
+# spring
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB #\u5355\u6B21\u6587\u4EF6\u4E0A\u4F20\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC7100MB
+      max-request-size: 500MB #\u8BBE\u7F6E\u5355\u6B21\u6587\u4EF6\u8BF7\u6C42\u603B\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC7500MB
+
+  jmx:
+    default-domain: li_blog_picture
+  thymeleaf:
+    cache: false #\u5173\u95ED\u7F13\u5B58
+  application:
+    name: li_blog_picture
+  security:
+    user:
+      name: user
+      password: password123
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://localhost:8602
+
+  # redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # \u91C7\u6837\u6BD4\u4F8B\u4E3A: 0.1(\u537310%),\u8BBE\u7F6E\u7684\u503C\u4ECB\u4E8E0.0\u52301.0\u4E4B\u95F4\uFF0C1.0\u5219\u8868\u793A\u5168\u90E8\u91C7\u96C6\u3002
+
+  # zipkin \u914D\u7F6E
+  zipkin:
+    base-url: http://localhost:9411 # \u6307\u5B9A\u4E86Zipkin\u670D\u52A1\u5668\u7684\u5730\u5740
+
+  # database config
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mogu_picture?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+
+    # \u914D\u7F6E\u76D1\u63A7\u7EDF\u8BA1\u62E6\u622A\u7684filters, \u53BB\u6389\u540E\u76D1\u63A7\u754C\u9762sql\u65E0\u6CD5\u7EDF\u8BA1\uFF0C\u2018wall'\u7528\u4E8E\u9632\u706B\u5899
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  mvc:
+    static-path-pattern: /upload/**
+    resources:
+      static-locations: classpath:/static/upload
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+    lease-renewal-interval-in-seconds: 5
+    appname: li_blog_picture
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #\u5B9E\u4F53\u626B\u63CF\uFF0C\u591A\u4E2Apackage\u7528\u9017\u53F7\u6216\u8005\u5206\u53F7\u5206\u9694
+  typeAliasesPackage: com.steel.li_blog_picture.entity
+  global-config:
+    # \u6570\u636E\u5E93\u76F8\u5173\u914D\u7F6E
+    db-config:
+      #\u4E3B\u952E\u7C7B\u578B  0:"\u6570\u636E\u5E93ID\u81EA\u589E", 1:"\u7528\u6237\u8F93\u5165ID",2:"\u5168\u5C40\u552F\u4E00ID (\u6570\u5B57\u7C7B\u578B\u552F\u4E00ID)", 3:"\u5168\u5C40\u552F\u4E00ID UUID";
+      id-type: UUID
+      #\u5B57\u6BB5\u7B56\u7565 IGNORED:"\u5FFD\u7565\u5224\u65AD",NOT_NULL:"\u975E NULL \u5224\u65AD"),NOT_EMPTY:"\u975E\u7A7A\u5224\u65AD"
+      field-strategy: NOT_EMPTY
+      #\u9A7C\u5CF0\u4E0B\u5212\u7EBF\u8F6C\u6362
+      column-underline: true
+      #\u6570\u636E\u5E93\u5927\u5199\u4E0B\u5212\u7EBF\u8F6C\u6362
+      #capital-mode: true
+      #\u903B\u8F91\u5220\u9664\u914D\u7F6E
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    #\u5237\u65B0mapper \u8C03\u8BD5\u795E\u5668
+    refresh: true
+  # \u539F\u751F\u914D\u7F6E
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false

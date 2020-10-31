@@ -12,6 +12,7 @@
         <module name="li_blog_eurake" />
         <module name="li_blog_foradmin" />
         <module name="li_blog_xo" />
+        <module name="li_blog_picture" />
         <module name="li_blog_base" />
       </profile>
     </annotationProcessing>
@@ -29,6 +30,7 @@
       <module name="li_blog_common" options="-parameters" />
       <module name="li_blog_eurake" options="-parameters" />
       <module name="li_blog_foradmin" options="-parameters" />
+      <module name="li_blog_picture" options="-parameters" />
       <module name="li_blog_utils" options="-parameters" />
       <module name="li_blog_xo" options="-parameters" />
     </option>

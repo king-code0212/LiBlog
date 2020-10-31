@@ -22,6 +22,7 @@
         <module>li_blog_eurake</module>
         <module>li_blog_xo</module>
         <module>li_blog_foradmin</module>
+        <module>li_blog_picture</module>
     </modules>
 
     <properties>
